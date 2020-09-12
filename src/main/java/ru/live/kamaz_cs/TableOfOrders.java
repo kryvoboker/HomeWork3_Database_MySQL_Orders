@@ -56,7 +56,7 @@ public class TableOfOrders {
         }
     }
 
-    public String getNameOfClient(int id) throws SQLException {
+    private String getNameOfClient(int id) throws SQLException {
         String b = null;
         PreparedStatement ps = conn.prepareStatement("select name from Clients where id = ?");
         ps.setInt(1, id);
@@ -78,7 +78,7 @@ public class TableOfOrders {
         return b;
     }
 
-    public String getNameOfProduct(int id) throws SQLException {
+    private String getNameOfProduct(int id) throws SQLException {
         String a = null;
         PreparedStatement ps = conn.prepareStatement("select name from Products where id = ?");
         ps.setInt(1, id);
@@ -101,7 +101,7 @@ public class TableOfOrders {
         return a;
     }
 
-    public double getPriceOfProduct(int id) throws SQLException {
+    private double getPriceOfProduct(int id) throws SQLException {
         double b = 0;
         PreparedStatement ps = conn.prepareStatement("select price from Products where name = ?");
         ps.setString(1, getNameOfProduct(id));
