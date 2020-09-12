@@ -8,7 +8,7 @@ public class TableOfOrders {
     private static final String DB_CONNECTION = "jdbc:mysql://localhost/HomeWork3_Orders?useUnicode=true&serverTimezone=UTC&" +
             "useSSL=true&verifyServerCertificate=false";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Bolvanka_123";
+    private static final String DB_PASSWORD = "password";
     private int numberOfOrder = 1;
 
     private static Connection conn;
